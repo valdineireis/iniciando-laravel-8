@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -72,9 +73,15 @@
             </div>
         </nav>
 
+        <div class="container">
+            @yield('title')
+        </div>
+
         <main class="py-4">
             @yield('content')
         </main>
+
+        @yield('js')
     </div>
 </body>
 </html>

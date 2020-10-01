@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+{{-- @section('css')
+    <style>
+        body {
+            background-color:red;
+        }
+    </style>
+@endsection --}}
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -22,3 +30,10 @@
 </div>
 @endsection
 
+{{-- @section('title', 'Meu título do blade') --}}
+
+{{--  @section('js')
+    <script>
+        alert('ola');
+    </script>
+@endsection --}}
