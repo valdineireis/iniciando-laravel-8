@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestUsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,10 @@ Route::get('/', function () {
 //     });
 
 // });
+
+// [App\Http\Controllers\TestUsersController, 'index']
+Route::get('test/users', [TestUsersController::class, 'index']);
+Route::get('test/user/{id}', [TestUsersController::class, 'show']);
 
 Auth::routes();
 
