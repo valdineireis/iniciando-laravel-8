@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>Usuário {{ $user->name }}</h2>
+            <h2>Usuário <strong>{{ $user->name }}</strong></h2>
             Dados do usuário
             <ul>
                 <li>Nome: {{ $user->name }}</li>
