@@ -40,6 +40,11 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="col-md-12">
+            {{ $tasks->links() }}
+        </div>
+
     </div>
 </div>
 @endsection
