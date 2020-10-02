@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <form action="{{ route('task.store') }}" method="POST">
+        <form action="{{ route('tasks.store') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Tarefa</label>

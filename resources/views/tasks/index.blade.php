@@ -17,13 +17,13 @@
                 <tbody>
                     @foreach($tasks as $task)
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{ $task->id }}</th>
                         <td>{{ $task->name }}</td>
                         <td>{{ $task->status ? 'Aberta' : 'Fechada'  }}</td>
                         <td>
-                            <a href="{{ route('task.show', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Ver</a>
-                            <a href="{{ route('task.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Editar</a>
-                            <form style="display: inline;" action="{{ route('task.destroy', ['task' => $task->id]) }}" method="POST">
+                            <a href="{{ route('tasks.show', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Ver</a>
+                            <a href="{{ route('tasks.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Editar</a>
+                            <form style="display: inline;" action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger">deletar</button>
                             </form>

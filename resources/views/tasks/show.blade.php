@@ -20,9 +20,9 @@
         </div>
 
         <div class="col-md-12">
-            <a href="{{ route('task.index') }}" class="btn btn-sm btn-secondary">Voltar</a>
-            <a href="{{ route('task.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-secondary">Editar</a>
-            <form style="display: inline;" action="{{ route('task.destroy', ['task' => $task->id]) }}" method="POST">
+            <a href="{{ route('tasks.index') }}" class="btn btn-sm btn-secondary">Voltar</a>
+            <a href="{{ route('tasks.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-secondary">Editar</a>
+            <form style="display: inline;" action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
                 @method('DELETE')
                 <button type="submit" class="btn btn-sm btn-danger">deletar</button>
             </form>
