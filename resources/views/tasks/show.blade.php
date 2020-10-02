@@ -13,7 +13,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Status</th>
-                        <td>{{ $task->status ? 'Aberta' : 'Fechada'  }}</td>
+                        <td>{{ $task->status ? 'Concluída' : 'Aberta'  }}</td>
                     </tr>
                 </tbody>
             </table>
