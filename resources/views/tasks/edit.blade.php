@@ -4,7 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <form action="{{ route('task.update', ['task' => $task->id]) }}" method="POST">
+            <form action="{{ route('tasks.update', ['task' => $task->id]) }}" method="POST">
+                @csrf
                 @method('PUT')
                 <div class="form-group">
                     <label for="name">Tarefa</label>
@@ -29,8 +30,9 @@
             </form>
         </div>
         <div class="col-md-12">
-            <a style="display: inline;" href="{{ route('task.index') }}" class="mr-3 btn btn-sm btn-secondary">Voltar</a>
-            <form style="display: inline-block;" action="{{ route('task.destroy', ['task' => $task->id]) }}" method="POST">
+            <a style="display: inline;" href="{{ route('tasks.index') }}" class="mr-3 btn btn-sm btn-secondary">Voltar</a>
+            <form style="display: inline-block;" action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
+                @csrf
                 @method('DELETE')
                 <button type="submit" class="mr-3 btn btn-sm btn-danger">deletar</button>
             </form>
