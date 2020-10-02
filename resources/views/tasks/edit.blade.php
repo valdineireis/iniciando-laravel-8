@@ -9,18 +9,18 @@
                 @method('PUT')
                 <div class="form-group">
                     <label for="name">Tarefa</label>
-                    <input class="form-control" id="name" value="{{ $task->name }}" />
+                    <input class="form-control" id="name" name="name" value="{{ $task->name }}" />
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="status" id="status1" value="option1" {{ $task->status ? 'checked' : '' }} />
-                        <label class="form-check-label" for="status1">
+                        <input class="form-check-input" type="radio" name="status" id="status2" value=0 {{ $task->status == 0 ? 'checked' : '' }}>
+                        <label class="form-check-label" for="status2">
                             Aberta
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="status" id="status2" value="option2" {{ $task->status == 0 ? 'checked' : '' }}>
-                        <label class="form-check-label" for="status2">
+                        <input class="form-check-input" type="radio" name="status" id="status1" value=1 {{ $task->status ? 'checked' : '' }} />
+                        <label class="form-check-label" for="status1">
                             Concluída
                         </label>
                     </div>

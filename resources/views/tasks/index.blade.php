@@ -22,8 +22,14 @@
                         <td>{{ $task->status ? 'Concluída' : 'Aberta'  }}</td>
                         <td>
                             <a href="{{ route('tasks.show', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Ver</a>
-                            <a href="{{ route('tasks.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Editar</a>
-                            <form style="display: inline;" action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
+                            <a
+                                href="{{ route('tasks.edit', ['task' => $task->id]) }}"
+                                class="btn btn-sm btn-primary">
+                                Editar
+                            </a>
+                            <form
+                                style="display: inline;"
+                                action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger">deletar</button>
