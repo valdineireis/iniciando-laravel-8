@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h2>Listagem de Tarefas</h2>
+            <h2>Listagem de Tarefas <a href="{{ route('tasks.create') }}" class="btn btn-sm btn-primary">Novo</a></h2>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@
                     <tr>
                         <th scope="row">{{ $task->id }}</th>
                         <td>{{ $task->name }}</td>
-                        <td>{{ $task->status ? 'Aberta' : 'Fechada'  }}</td>
+                        <td>{{ $task->status ? 'Concluída' : 'Aberta'  }}</td>
                         <td>
                             <a href="{{ route('tasks.show', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Ver</a>
                             <a href="{{ route('tasks.edit', ['task' => $task->id]) }}" class="btn btn-sm btn-primary">Editar</a>

@@ -12,13 +12,13 @@
             </div>
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="status" id="status1" value=1 checked />
+                    <input class="form-check-input" type="radio" name="status" id="status1" value=0 checked />
                     <label class="form-check-label" for="status1">
                         Aberta
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="status" id="status2" value=0>
+                    <input class="form-check-input" type="radio" name="status" id="status2" value=1>
                     <label class="form-check-label" for="status2">
                         Concluída
                     </label>
