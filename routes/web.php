@@ -57,6 +57,7 @@ Route::get('test/user/{id}', [TestUsersController::class, 'show']);
 // DELETE (DELETE)
 // Route::delete('tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
 
+Route::get('tasks/page/{page}', [TaskController::class, 'index'])->name('tasks.index.page');
 Route::resource('tasks', TaskController::class);
 
 Auth::routes();

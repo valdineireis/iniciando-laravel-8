@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index($page = 1)
     {
         // $tasks = Task::all();
-        $tasks = Task::paginate();
+        $tasks = Task::paginateUri(10, $page);
         return view('tasks.index', compact('tasks'));
     }
 

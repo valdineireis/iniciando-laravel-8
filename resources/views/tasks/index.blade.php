@@ -42,7 +42,7 @@
         </div>
 
         <div class="col-md-12">
-            {{ $tasks->links() }}
+            {!! $tasks->linksUri !!}
         </div>
 
     </div>
